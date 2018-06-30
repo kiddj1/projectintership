@@ -63,7 +63,6 @@ export const TabOnMainPage = createMaterialTopTabNavigator(
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({focused, tintColor}) =>{
                 const { routeName } = navigation.state;
-                console.log(focused);
                 let iconName;
                 if (routeName === 'Cake') {
                     !focused ? iconName = require('./resource/img/cake.png') : iconName = require('./resource/img/cake_active.png');
