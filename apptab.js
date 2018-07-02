@@ -88,7 +88,7 @@ export const TabOnSecondPage = createMaterialTopTabNavigator(
     },{
         tabBarOptions: {
             indicatorStyle  :{
-                backgroundColor: '#00a8ff'
+                backgroundColor: '#00a8ff',  
             },
             style: {
                 backgroundColor: 'white',
