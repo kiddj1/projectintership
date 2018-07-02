@@ -9,7 +9,7 @@ import {
 export const Tab = createBottomTabNavigator(
     {
         Home: Container.MainPage,
-        History: Container.SecondPage,
+        Cart: Container.SecondPage,
     },{
         swipeEnabled: false,
         navigationOptions: ({ navigation }) => ({
@@ -18,7 +18,7 @@ export const Tab = createBottomTabNavigator(
                 let iconName;
                 if(routeName === 'Home'){
                     iconName = `ios-home${focused ? '' : '-outline' }`;
-                } else if (routeName === 'History'){
+                } else if (routeName === 'Cart'){
                     iconName = `ios-paper${focused ? '' : '-outline' }`;
                 }   
                 return(
@@ -83,8 +83,8 @@ export const TabOnMainPage = createMaterialTopTabNavigator(
 );
 export const TabOnSecondPage = createMaterialTopTabNavigator(
     {
-        InPastOrder: Container.InPastOrder,
-        InProcess: Container.InProcess,
+        CURRENTORDER: Container.InPastOrder,
+        ORDERHISTORY: Container.InProcess,
     },{
         tabBarOptions: {
             indicatorStyle  :{
