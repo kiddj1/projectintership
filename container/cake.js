@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList
 } from 'react-native';
 
 export default class Cake extends Component{
@@ -13,9 +14,7 @@ export default class Cake extends Component{
 
     render(){
         return(
-            <View style={{flex: 1}}>
-                
-                
+            <View style={{flex: 1}}>           
             </View>
 
         )

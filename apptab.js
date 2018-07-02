@@ -46,6 +46,7 @@ export const TabOnMainPage = createMaterialTopTabNavigator(
     
     },{
         swipeEnabled: false,
+        animationEnabled: false,
         order: ['Food', 'Drink', 'Cake', 'Fruit'],
         tabBarOptions: {
             indicatorStyle  :{

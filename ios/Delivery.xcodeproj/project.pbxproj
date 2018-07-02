@@ -49,6 +49,41 @@
 		915D7FD802B24BF2869142C1 /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7201C1743CE243A78A3A7E1D /* Octicons.ttf */; };
 		178112D645544AD79F331A77 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 794325CC4D01400CACDFC5FA /* SimpleLineIcons.ttf */; };
 		24FA98BF796A4FF0A213A92F /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7B30F51C3C9D4A5AB394223B /* Zocial.ttf */; };
+		6BE811302159469781FFC959 /* VNARIAL.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 781EEDA90018412883F1B259 /* VNARIAL.TTF */; };
+		8E18A664A76947408A8B308D /* VNBLACK.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 188AA6B62C284E5E821540DD /* VNBLACK.TTF */; };
+		1D1C5545126843B9A1ABEAF5 /* VNARABIA.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 7BCC50C74BB94F1495F4C22B /* VNARABIA.TTF */; };
+		0B32EB1BDBC447D39F11BA42 /* VNARIAL.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4E2CE8D0533C461DAADF8A8F /* VNARIAL.otf */; };
+		87C6D65EE5434D208F40944A /* ObelixPro-Broken-cyr.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C25DBACB663A4B25997FE232 /* ObelixPro-Broken-cyr.ttf */; };
+		C062D370EF644F2A864B602B /* FallingSky.otf in Resources */ = {isa = PBXBuildFile; fileRef = 68172686843C4C6A9C58578F /* FallingSky.otf */; };
+		CDA51260E76842F5B1C088D5 /* FallingSkyBd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 995200CF9D634662A070775A /* FallingSkyBd.otf */; };
+		4D3458BF81444D23B34E1D9A /* FallingSkyBd+.otf in Resources */ = {isa = PBXBuildFile; fileRef = 8178A0A424FA4A7BAE8BC85C /* FallingSkyBd+.otf */; };
+		1E69F5D449204F7EB009B5D7 /* FallingSkyBd+Obl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31835B831B6545C885DC7833 /* FallingSkyBd+Obl.otf */; };
+		2F49CE9B9D404067B618D9F6 /* FallingSkyBdObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = D51CAE267D99426492D90144 /* FallingSkyBdObl.otf */; };
+		7AB515C06EE045728F355807 /* FallingSkyBlk.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3BB7205C26F147D98E8EDBE9 /* FallingSkyBlk.otf */; };
+		376E4A50DD664A6781CB1911 /* FallingSkyBlkObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 2DAF414B9E6845508C4FBFF2 /* FallingSkyBlkObl.otf */; };
+		6976B9D05A0A4E35BC24DCA2 /* FallingSkyCond.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F3E415A46F34202B94FD400 /* FallingSkyCond.otf */; };
+		C6C366C5F2204F22B806C1EF /* FallingSkyCondObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 47D9A73D7E0549A1A51FDA02 /* FallingSkyCondObl.otf */; };
+		2365B4019F3A4F4097A59D2B /* FallingSkyCondOu.otf in Resources */ = {isa = PBXBuildFile; fileRef = CFD8852F360A4F34BA9F5706 /* FallingSkyCondOu.otf */; };
+		56827297C86A427D96C655B8 /* FallingSkyCondOuObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = C6924637186E4EFA84817A54 /* FallingSkyCondOuObl.otf */; };
+		F33AE72067984C5B8CE2E93E /* FallingSkyExBd.otf in Resources */ = {isa = PBXBuildFile; fileRef = B63CA4D313BA4CA8B5A3B029 /* FallingSkyExBd.otf */; };
+		6ECF978FAE794A43BE38AC90 /* FallingSkyExBdObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = DFC0E2DC8A8E478A9577EA63 /* FallingSkyExBdObl.otf */; };
+		D612409FAE5942D99EF81CE0 /* FallingSkyExt.otf in Resources */ = {isa = PBXBuildFile; fileRef = A8614FDD386A41529168E9F7 /* FallingSkyExt.otf */; };
+		EE6F3047DA5442858D4799DB /* FallingSkyExtObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6AAB0FFA08BE46C69CEF01A4 /* FallingSkyExtObl.otf */; };
+		05033EDD89B6404D82F8568A /* FallingSkyExtOu.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0C44054754DF4C52BE572D4F /* FallingSkyExtOu.otf */; };
+		5E9D658C433E48BD878B9BD4 /* FallingSkyExtOuObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = D6E843FED32248F080D807FB /* FallingSkyExtOuObl.otf */; };
+		0A224DF5F53B4790BD25A80C /* FallingSkyLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = 57DA8D1269DD4B31B0C5BD57 /* FallingSkyLight.otf */; };
+		13565718EEB34D3A8A5FBAD2 /* FallingSkyLightObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 666FB0DED32B4BE98F527CFA /* FallingSkyLightObl.otf */; };
+		8072320EA59E4EBDA617CD44 /* FallingSkyMed.otf in Resources */ = {isa = PBXBuildFile; fileRef = C24ACE9381B2486DA8474E6B /* FallingSkyMed.otf */; };
+		C03A27A7584E44EF9CB27CDB /* FallingSkyMedObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0F9647F74FD6453194F9DCB5 /* FallingSkyMedObl.otf */; };
+		4ADC9506DC23455189B0CE0D /* FallingSkyObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 4B8A946C7D544294AAB64B7B /* FallingSkyObl.otf */; };
+		E6C17CFC77394744918C1F51 /* FallingSkyOu.otf in Resources */ = {isa = PBXBuildFile; fileRef = D0519DA23B7D48D6B6202FE5 /* FallingSkyOu.otf */; };
+		C7992BD8286947DCB9C4B868 /* FallingSkyOuObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = 0D26D9179A004D548E22B544 /* FallingSkyOuObl.otf */; };
+		3B27061C889E4E608CBCB954 /* FallingSkySeBd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 903EC13B23C949D8BD015B9D /* FallingSkySeBd.otf */; };
+		CD632C470F074F2EA18C18F5 /* FallingSkySeBdObl.otf in Resources */ = {isa = PBXBuildFile; fileRef = C2C2E632B4C0439F89957FC4 /* FallingSkySeBdObl.otf */; };
+		7758B9697F154B298682AF25 /* LiberationSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B70181083B4A4E5EAED03D49 /* LiberationSans-Bold.ttf */; };
+		E4D05799ED994469AAB450C0 /* LiberationSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FF89683804DA4C44B24D01FF /* LiberationSans-BoldItalic.ttf */; };
+		7F56BB60463B4E63B5A15201 /* LiberationSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BE66DD6E52454CFBA915208D /* LiberationSans-Italic.ttf */; };
+		FFE52B8C38B5439CB48C4F68 /* LiberationSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06BE110F106546A0B4A7ACD8 /* LiberationSans-Regular.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -367,6 +402,41 @@
 		7201C1743CE243A78A3A7E1D /* Octicons.ttf */ = {isa = PBXFileReference; name = "Octicons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Octicons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		794325CC4D01400CACDFC5FA /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; name = "SimpleLineIcons.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7B30F51C3C9D4A5AB394223B /* Zocial.ttf */ = {isa = PBXFileReference; name = "Zocial.ttf"; path = "../node_modules/react-native-vector-icons/Fonts/Zocial.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		781EEDA90018412883F1B259 /* VNARIAL.TTF */ = {isa = PBXFileReference; name = "VNARIAL.TTF"; path = "../assets/fonts/VNARIAL.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		188AA6B62C284E5E821540DD /* VNBLACK.TTF */ = {isa = PBXFileReference; name = "VNBLACK.TTF"; path = "../assets/fonts/VNBLACK.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		7BCC50C74BB94F1495F4C22B /* VNARABIA.TTF */ = {isa = PBXFileReference; name = "VNARABIA.TTF"; path = "../assets/fonts/VNARABIA.TTF"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4E2CE8D0533C461DAADF8A8F /* VNARIAL.otf */ = {isa = PBXFileReference; name = "VNARIAL.otf"; path = "../assets/fonts/VNARIAL.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C25DBACB663A4B25997FE232 /* ObelixPro-Broken-cyr.ttf */ = {isa = PBXFileReference; name = "ObelixPro-Broken-cyr.ttf"; path = "../assets/fonts/ObelixPro-Broken-cyr.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		68172686843C4C6A9C58578F /* FallingSky.otf */ = {isa = PBXFileReference; name = "FallingSky.otf"; path = "../assets/fonts/FallingSky.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		995200CF9D634662A070775A /* FallingSkyBd.otf */ = {isa = PBXFileReference; name = "FallingSkyBd.otf"; path = "../assets/fonts/FallingSkyBd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		8178A0A424FA4A7BAE8BC85C /* FallingSkyBd+.otf */ = {isa = PBXFileReference; name = "FallingSkyBd+.otf"; path = "../assets/fonts/FallingSkyBd+.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		31835B831B6545C885DC7833 /* FallingSkyBd+Obl.otf */ = {isa = PBXFileReference; name = "FallingSkyBd+Obl.otf"; path = "../assets/fonts/FallingSkyBd+Obl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D51CAE267D99426492D90144 /* FallingSkyBdObl.otf */ = {isa = PBXFileReference; name = "FallingSkyBdObl.otf"; path = "../assets/fonts/FallingSkyBdObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		3BB7205C26F147D98E8EDBE9 /* FallingSkyBlk.otf */ = {isa = PBXFileReference; name = "FallingSkyBlk.otf"; path = "../assets/fonts/FallingSkyBlk.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		2DAF414B9E6845508C4FBFF2 /* FallingSkyBlkObl.otf */ = {isa = PBXFileReference; name = "FallingSkyBlkObl.otf"; path = "../assets/fonts/FallingSkyBlkObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F3E415A46F34202B94FD400 /* FallingSkyCond.otf */ = {isa = PBXFileReference; name = "FallingSkyCond.otf"; path = "../assets/fonts/FallingSkyCond.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		47D9A73D7E0549A1A51FDA02 /* FallingSkyCondObl.otf */ = {isa = PBXFileReference; name = "FallingSkyCondObl.otf"; path = "../assets/fonts/FallingSkyCondObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		CFD8852F360A4F34BA9F5706 /* FallingSkyCondOu.otf */ = {isa = PBXFileReference; name = "FallingSkyCondOu.otf"; path = "../assets/fonts/FallingSkyCondOu.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C6924637186E4EFA84817A54 /* FallingSkyCondOuObl.otf */ = {isa = PBXFileReference; name = "FallingSkyCondOuObl.otf"; path = "../assets/fonts/FallingSkyCondOuObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B63CA4D313BA4CA8B5A3B029 /* FallingSkyExBd.otf */ = {isa = PBXFileReference; name = "FallingSkyExBd.otf"; path = "../assets/fonts/FallingSkyExBd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		DFC0E2DC8A8E478A9577EA63 /* FallingSkyExBdObl.otf */ = {isa = PBXFileReference; name = "FallingSkyExBdObl.otf"; path = "../assets/fonts/FallingSkyExBdObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		A8614FDD386A41529168E9F7 /* FallingSkyExt.otf */ = {isa = PBXFileReference; name = "FallingSkyExt.otf"; path = "../assets/fonts/FallingSkyExt.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		6AAB0FFA08BE46C69CEF01A4 /* FallingSkyExtObl.otf */ = {isa = PBXFileReference; name = "FallingSkyExtObl.otf"; path = "../assets/fonts/FallingSkyExtObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0C44054754DF4C52BE572D4F /* FallingSkyExtOu.otf */ = {isa = PBXFileReference; name = "FallingSkyExtOu.otf"; path = "../assets/fonts/FallingSkyExtOu.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D6E843FED32248F080D807FB /* FallingSkyExtOuObl.otf */ = {isa = PBXFileReference; name = "FallingSkyExtOuObl.otf"; path = "../assets/fonts/FallingSkyExtOuObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		57DA8D1269DD4B31B0C5BD57 /* FallingSkyLight.otf */ = {isa = PBXFileReference; name = "FallingSkyLight.otf"; path = "../assets/fonts/FallingSkyLight.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		666FB0DED32B4BE98F527CFA /* FallingSkyLightObl.otf */ = {isa = PBXFileReference; name = "FallingSkyLightObl.otf"; path = "../assets/fonts/FallingSkyLightObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C24ACE9381B2486DA8474E6B /* FallingSkyMed.otf */ = {isa = PBXFileReference; name = "FallingSkyMed.otf"; path = "../assets/fonts/FallingSkyMed.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0F9647F74FD6453194F9DCB5 /* FallingSkyMedObl.otf */ = {isa = PBXFileReference; name = "FallingSkyMedObl.otf"; path = "../assets/fonts/FallingSkyMedObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		4B8A946C7D544294AAB64B7B /* FallingSkyObl.otf */ = {isa = PBXFileReference; name = "FallingSkyObl.otf"; path = "../assets/fonts/FallingSkyObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		D0519DA23B7D48D6B6202FE5 /* FallingSkyOu.otf */ = {isa = PBXFileReference; name = "FallingSkyOu.otf"; path = "../assets/fonts/FallingSkyOu.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		0D26D9179A004D548E22B544 /* FallingSkyOuObl.otf */ = {isa = PBXFileReference; name = "FallingSkyOuObl.otf"; path = "../assets/fonts/FallingSkyOuObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		903EC13B23C949D8BD015B9D /* FallingSkySeBd.otf */ = {isa = PBXFileReference; name = "FallingSkySeBd.otf"; path = "../assets/fonts/FallingSkySeBd.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		C2C2E632B4C0439F89957FC4 /* FallingSkySeBdObl.otf */ = {isa = PBXFileReference; name = "FallingSkySeBdObl.otf"; path = "../assets/fonts/FallingSkySeBdObl.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		B70181083B4A4E5EAED03D49 /* LiberationSans-Bold.ttf */ = {isa = PBXFileReference; name = "LiberationSans-Bold.ttf"; path = "../assets/fonts/LiberationSans-Bold.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		FF89683804DA4C44B24D01FF /* LiberationSans-BoldItalic.ttf */ = {isa = PBXFileReference; name = "LiberationSans-BoldItalic.ttf"; path = "../assets/fonts/LiberationSans-BoldItalic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		BE66DD6E52454CFBA915208D /* LiberationSans-Italic.ttf */ = {isa = PBXFileReference; name = "LiberationSans-Italic.ttf"; path = "../assets/fonts/LiberationSans-Italic.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		06BE110F106546A0B4A7ACD8 /* LiberationSans-Regular.ttf */ = {isa = PBXFileReference; name = "LiberationSans-Regular.ttf"; path = "../assets/fonts/LiberationSans-Regular.ttf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -645,6 +715,41 @@
 				7201C1743CE243A78A3A7E1D /* Octicons.ttf */,
 				794325CC4D01400CACDFC5FA /* SimpleLineIcons.ttf */,
 				7B30F51C3C9D4A5AB394223B /* Zocial.ttf */,
+				781EEDA90018412883F1B259 /* VNARIAL.TTF */,
+				188AA6B62C284E5E821540DD /* VNBLACK.TTF */,
+				7BCC50C74BB94F1495F4C22B /* VNARABIA.TTF */,
+				4E2CE8D0533C461DAADF8A8F /* VNARIAL.otf */,
+				C25DBACB663A4B25997FE232 /* ObelixPro-Broken-cyr.ttf */,
+				68172686843C4C6A9C58578F /* FallingSky.otf */,
+				995200CF9D634662A070775A /* FallingSkyBd.otf */,
+				8178A0A424FA4A7BAE8BC85C /* FallingSkyBd+.otf */,
+				31835B831B6545C885DC7833 /* FallingSkyBd+Obl.otf */,
+				D51CAE267D99426492D90144 /* FallingSkyBdObl.otf */,
+				3BB7205C26F147D98E8EDBE9 /* FallingSkyBlk.otf */,
+				2DAF414B9E6845508C4FBFF2 /* FallingSkyBlkObl.otf */,
+				0F3E415A46F34202B94FD400 /* FallingSkyCond.otf */,
+				47D9A73D7E0549A1A51FDA02 /* FallingSkyCondObl.otf */,
+				CFD8852F360A4F34BA9F5706 /* FallingSkyCondOu.otf */,
+				C6924637186E4EFA84817A54 /* FallingSkyCondOuObl.otf */,
+				B63CA4D313BA4CA8B5A3B029 /* FallingSkyExBd.otf */,
+				DFC0E2DC8A8E478A9577EA63 /* FallingSkyExBdObl.otf */,
+				A8614FDD386A41529168E9F7 /* FallingSkyExt.otf */,
+				6AAB0FFA08BE46C69CEF01A4 /* FallingSkyExtObl.otf */,
+				0C44054754DF4C52BE572D4F /* FallingSkyExtOu.otf */,
+				D6E843FED32248F080D807FB /* FallingSkyExtOuObl.otf */,
+				57DA8D1269DD4B31B0C5BD57 /* FallingSkyLight.otf */,
+				666FB0DED32B4BE98F527CFA /* FallingSkyLightObl.otf */,
+				C24ACE9381B2486DA8474E6B /* FallingSkyMed.otf */,
+				0F9647F74FD6453194F9DCB5 /* FallingSkyMedObl.otf */,
+				4B8A946C7D544294AAB64B7B /* FallingSkyObl.otf */,
+				D0519DA23B7D48D6B6202FE5 /* FallingSkyOu.otf */,
+				0D26D9179A004D548E22B544 /* FallingSkyOuObl.otf */,
+				903EC13B23C949D8BD015B9D /* FallingSkySeBd.otf */,
+				C2C2E632B4C0439F89957FC4 /* FallingSkySeBdObl.otf */,
+				B70181083B4A4E5EAED03D49 /* LiberationSans-Bold.ttf */,
+				FF89683804DA4C44B24D01FF /* LiberationSans-BoldItalic.ttf */,
+				BE66DD6E52454CFBA915208D /* LiberationSans-Italic.ttf */,
+				06BE110F106546A0B4A7ACD8 /* LiberationSans-Regular.ttf */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -1107,6 +1212,41 @@
 				915D7FD802B24BF2869142C1 /* Octicons.ttf in Resources */,
 				178112D645544AD79F331A77 /* SimpleLineIcons.ttf in Resources */,
 				24FA98BF796A4FF0A213A92F /* Zocial.ttf in Resources */,
+				6BE811302159469781FFC959 /* VNARIAL.TTF in Resources */,
+				8E18A664A76947408A8B308D /* VNBLACK.TTF in Resources */,
+				1D1C5545126843B9A1ABEAF5 /* VNARABIA.TTF in Resources */,
+				0B32EB1BDBC447D39F11BA42 /* VNARIAL.otf in Resources */,
+				87C6D65EE5434D208F40944A /* ObelixPro-Broken-cyr.ttf in Resources */,
+				C062D370EF644F2A864B602B /* FallingSky.otf in Resources */,
+				CDA51260E76842F5B1C088D5 /* FallingSkyBd.otf in Resources */,
+				4D3458BF81444D23B34E1D9A /* FallingSkyBd+.otf in Resources */,
+				1E69F5D449204F7EB009B5D7 /* FallingSkyBd+Obl.otf in Resources */,
+				2F49CE9B9D404067B618D9F6 /* FallingSkyBdObl.otf in Resources */,
+				7AB515C06EE045728F355807 /* FallingSkyBlk.otf in Resources */,
+				376E4A50DD664A6781CB1911 /* FallingSkyBlkObl.otf in Resources */,
+				6976B9D05A0A4E35BC24DCA2 /* FallingSkyCond.otf in Resources */,
+				C6C366C5F2204F22B806C1EF /* FallingSkyCondObl.otf in Resources */,
+				2365B4019F3A4F4097A59D2B /* FallingSkyCondOu.otf in Resources */,
+				56827297C86A427D96C655B8 /* FallingSkyCondOuObl.otf in Resources */,
+				F33AE72067984C5B8CE2E93E /* FallingSkyExBd.otf in Resources */,
+				6ECF978FAE794A43BE38AC90 /* FallingSkyExBdObl.otf in Resources */,
+				D612409FAE5942D99EF81CE0 /* FallingSkyExt.otf in Resources */,
+				EE6F3047DA5442858D4799DB /* FallingSkyExtObl.otf in Resources */,
+				05033EDD89B6404D82F8568A /* FallingSkyExtOu.otf in Resources */,
+				5E9D658C433E48BD878B9BD4 /* FallingSkyExtOuObl.otf in Resources */,
+				0A224DF5F53B4790BD25A80C /* FallingSkyLight.otf in Resources */,
+				13565718EEB34D3A8A5FBAD2 /* FallingSkyLightObl.otf in Resources */,
+				8072320EA59E4EBDA617CD44 /* FallingSkyMed.otf in Resources */,
+				C03A27A7584E44EF9CB27CDB /* FallingSkyMedObl.otf in Resources */,
+				4ADC9506DC23455189B0CE0D /* FallingSkyObl.otf in Resources */,
+				E6C17CFC77394744918C1F51 /* FallingSkyOu.otf in Resources */,
+				C7992BD8286947DCB9C4B868 /* FallingSkyOuObl.otf in Resources */,
+				3B27061C889E4E608CBCB954 /* FallingSkySeBd.otf in Resources */,
+				CD632C470F074F2EA18C18F5 /* FallingSkySeBdObl.otf in Resources */,
+				7758B9697F154B298682AF25 /* LiberationSans-Bold.ttf in Resources */,
+				E4D05799ED994469AAB450C0 /* LiberationSans-BoldItalic.ttf in Resources */,
+				7F56BB60463B4E63B5A15201 /* LiberationSans-Italic.ttf in Resources */,
+				FFE52B8C38B5439CB48C4F68 /* LiberationSans-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

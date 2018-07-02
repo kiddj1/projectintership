@@ -3,7 +3,8 @@ import {
   Platform,
   StyleSheet,
   Text,
-  View
+  View,
+  FlatList
 } from 'react-native';
 
 export default class Fruit extends Component{
@@ -14,8 +15,7 @@ export default class Fruit extends Component{
     render(){
         return(
             <View style={{flex: 1}}>
-                
-                
+
             </View>
 
         )
