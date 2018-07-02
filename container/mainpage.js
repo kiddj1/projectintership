@@ -6,7 +6,7 @@ import {
   View
 } from 'react-native';
 import {TabOnMainPage} from '../apptab'; 
-export default class MainPage extends Component{
+export class MainPage extends Component{
     constructor(props){
         super(props);
     }

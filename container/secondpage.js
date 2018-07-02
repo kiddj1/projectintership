@@ -9,18 +9,18 @@ import {
   View,
   Button
 } from 'react-native';
-
-export  class SecondPage extends Component{
+import {TabOnSecondPage} from '../apptab'; 
+export class SecondPage extends Component{
     constructor(props){
         super(props);
         this.state = {}
     }
 
     render(){
+        console.log(this.props.people);
         return(
-            <View>
-                <Text>{this.props.count}</Text>
-                <Button onPress={() => this.props.counterIncrement()} title='AAAA' />
+            <View style={{flex: 1}}>
+                <TabOnSecondPage/>
             </View>
         )
     }
@@ -28,7 +28,9 @@ export  class SecondPage extends Component{
 }
 
 const mapStateToProps = state => ({
-    count: state,
+    count: state.countReducer,
+    people: state.dataReducer,
+
 });
 const mapDispatchToProps = (dispatch) => (
     bindActionCreators(ActionCreators, dispatch)

@@ -9,7 +9,7 @@ import {
   Image
 } from 'react-native';
 
-export default class Food extends Component{
+export  class Food extends Component{
     constructor(props){
         super(props);
     }

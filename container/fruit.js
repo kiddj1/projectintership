@@ -7,7 +7,7 @@ import {
   FlatList
 } from 'react-native';
 
-export default class Fruit extends Component{
+export  class Fruit extends Component{
     constructor(props){
         super(props);
     }

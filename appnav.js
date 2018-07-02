@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation';
-import  {Tab} from './apptab';
+import { Tab } from './apptab';
 
 const mainStack = createStackNavigator(
     {

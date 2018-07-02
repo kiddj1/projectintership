@@ -1,10 +1,5 @@
 import React from 'react';
-import Cake from './container/cake';
-import Drink from './container/drink';
-import Food from './container/food';
-import Fruit from './container/fruit';
-import MainPage from './container/mainpage';
-import SecondPage from './container/secondpage';
+import * as Container from './container/index';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator,createMaterialTopTabNavigator } from 'react-navigation';
 import {
@@ -13,8 +8,8 @@ import {
 
 export const Tab = createBottomTabNavigator(
     {
-        Home: MainPage,
-        History: SecondPage,
+        Home: Container.MainPage,
+        History: Container.SecondPage,
     },{
         swipeEnabled: false,
         navigationOptions: ({ navigation }) => ({
@@ -39,10 +34,10 @@ export const Tab = createBottomTabNavigator(
 
 export const TabOnMainPage = createMaterialTopTabNavigator(
     {
-        Cake: Cake,
-        Drink: Drink,
-        Food: Food,
-        Fruit: Fruit,
+        Cake: Container.Cake,
+        Drink: Container.Drink,
+        Food: Container.Food,
+        Fruit: Container.Fruit,
     
     },{
         swipeEnabled: false,
@@ -75,14 +70,35 @@ export const TabOnMainPage = createMaterialTopTabNavigator(
                     !focused ? iconName = require('./resource/img/fruit.png') : iconName = require('./resource/img/fruit_active.png');
                 }
                 return(   
-                        <Image
-                            style={{width: 20, height: 20}}
-                            source={iconName}
-                        />
+                    <Image
+                        style={{width: 20, height: 20}}
+                        source={iconName}
+                    />
                 )
             }
         })
         
     }
     
+);
+export const TabOnSecondPage = createMaterialTopTabNavigator(
+    {
+        InPastOrder: Container.InPastOrder,
+        InProcess: Container.InProcess,
+    },{
+        tabBarOptions: {
+            indicatorStyle  :{
+                backgroundColor: '#00a8ff'
+            },
+            style: {
+                backgroundColor: 'white',
+            },
+            tabStyle: {
+                height: Dimensions.get('window').height * 0.07,
+            },
+            labelStyle: {
+                color: 'black',
+            }
+        },
+    } 
 );

@@ -7,7 +7,7 @@ const initialState = {
     error: false
 }
   
-  export  function dataReducer (state = initialState, action) {
+export  const dataReducer = (state = initialState, action) => {
     switch (action.type) {
       case types.FETCHING_DATA:
         return {

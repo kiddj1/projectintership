@@ -3,20 +3,28 @@ import { AppRegistry } from 'react-native';
 import App from './App';
 import Home from './container/home';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware, combineReducers } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
-import {countReducer} from './reducer/counterReducer';
-import {dataReducer}  from './reducer/getDataReducer';
-const rootReducer = combineReducers({
-    countReducer,
-    dataReducer
+import rootReducer from './reducer/index';
+import { createLogger } from 'redux-logger';
 
-})
-const store = createStore(rootReducer, applyMiddleware(thunkMiddleware));
+const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ });
+
+// const store = createStore(rootReducer,compose(applyMiddleware(thunkMiddleware),loggerMiddleware));
+
+function configureStore(initialState){
+    const enhancer = compose(
+      applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware,
+      ),
+    );
+    return createStore(rootReducer, initialState, enhancer);
+}
 
 const AppContainer = () => {
     return (
-        <Provider store={store}>
+        <Provider store={configureStore({})}>
             <Home/>
         </Provider>
     )
