@@ -12,6 +12,14 @@ export const Tab = createBottomTabNavigator(
         Cart: Container.SecondPage,
     },{
         swipeEnabled: false,
+        tabBarOptions: {
+            activeTintColor: '#eb4d4b',
+            style: {
+                height: Dimensions.get('window').height * 0.07,
+            },
+            tabStyle: {  
+            }
+        },
         navigationOptions: ({ navigation }) => ({
             tabBarIcon: ({focused, tintColor}) =>{
                 const { routeName } = navigation.state;
@@ -22,13 +30,12 @@ export const Tab = createBottomTabNavigator(
                     iconName = `ios-paper${focused ? '' : '-outline' }`;
                 }   
                 return(
-                    <Ionicons name={iconName} size={25} color={tintColor} />
+                    <Ionicons name={iconName} size={16} color={tintColor} style={{justifyContent:'center'}} />
                 )
             }
         }),
-        tabBarOptions: {
-            activeTintColor: '#eb4d4b',
-        }
+
+        
     }
 );
 

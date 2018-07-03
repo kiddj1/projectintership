@@ -37,7 +37,7 @@ export  class Food extends Component{
         return(
             <View style={{flex: 1}}>
                 <FlatList
-                    data={[{key: 'a'}, {key: 'b'}, {key: 'c'}]}
+                    data={[{key: 'a'}, {key: 'b'}, {key: 'c'},{key: 'd'},{key: 'e'} , {key: 'f'}]}
                     renderItem={this.renderItem}
                 />   
             </View>
