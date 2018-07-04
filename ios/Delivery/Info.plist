@@ -99,6 +99,15 @@
 		<string>LiberationSans-BoldItalic.ttf</string>
 		<string>LiberationSans-Italic.ttf</string>
 		<string>LiberationSans-Regular.ttf</string>
+		<string>DMFCantellblack.ttf</string>
+		<string>DMFCantellbold.ttf</string>
+		<string>DMFCantelllight.ttf</string>
+		<string>DMFCantellmedium.ttf</string>
+		<string>DMFCantellregular.otf</string>
+		<string>DMFCantellthin.ttf</string>
+		<string>Motiva-Sans-Bold.otf</string>
+		<string>Motiva-Sans-Light.otf</string>
+		<string>Motiva-Sans.otf</string>
 	</array>
 </dict>
 </plist>

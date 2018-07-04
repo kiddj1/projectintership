@@ -2,8 +2,9 @@ import React from 'react';
 import * as Container from './container/index';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import { createBottomTabNavigator,createMaterialTopTabNavigator } from 'react-navigation';
+import LinearGradient from 'react-native-linear-gradient';
 import {
-    Image,View,Dimensions
+    Image,View,Dimensions,Text,TouchableOpacity,StyleSheet,
 } from 'react-native';
 
 export const Tab = createBottomTabNavigator(
@@ -88,24 +89,72 @@ export const TabOnMainPage = createMaterialTopTabNavigator(
     }
     
 );
+const TabOnSecondPageCustom = (props) => {
+    const tabActive = props.navigationState.routes[props.navigationState.index].routeName;
+    return (
+        <LinearGradient style={{flex: 0.3}} start={{x: 0, y: 1}} end={{x: 0, y: 0}} locations={[0,0.6]} colors={['#fbc2eb','#a6c1ee']}>
+            <View style={{flexDirection: 'row', justifyContent: 'space-around', flex:0.5, marginTop: 10 }}>
+                    <TouchableOpacity style={tabActive != 'CURRENTORDER' ? styles.tabInactive : styles.tabActive} onPress={() => props.navigation.navigate('CURRENTORDER')}>
+                        <Text style={tabActive == 'CURRENTORDER' ? styles.textActive : styles.textInActive}>Current</Text>
+                        {tabActive == 'CURRENTORDER' && <View style={{borderBottomWidth: 3,borderRadius: 30,borderBottomColor:'white',}}></View>}
+                    </TouchableOpacity>
+                    <TouchableOpacity style={tabActive != 'ORDERHISTORY' ? styles.tabActive : styles.tabInactive } onPress={() => props.navigation.navigate('ORDERHISTORY')}>
+                        <Text style={tabActive == 'ORDERHISTORY' ? styles.textActive : styles.textInActive}>History</Text>
+                        {tabActive == 'ORDERHISTORY' && <View style={{borderBottomWidth: 3,borderRadius: 30,borderBottomColor:'white',}}></View>}
+                    </TouchableOpacity>
+            </View>
+            <View style={{flex:0.5, alignItems: 'center', marginBottom: 10}}>
+                <View style={{}}>
+                    <Text style={{color: 'white', fontFamily: 'Motiva-Sans-Light',fontSize: 16}}>TOTAL SPENDINGS</Text>
+                    <Text style={styles.textBold}>$ 1,000.00</Text>
+                </View>
+            </View>
+        </LinearGradient>
+    )
+
+
+};
+const styles = StyleSheet.create({
+    textBold:{
+        color:'white',
+        fontSize: 18,
+        fontFamily: 'Motiva-Sans-Light',
+        textAlign: 'center'
+    },
+    textActive:{
+        color:'white',
+        fontFamily: 'Motiva-Sans-Bold',
+    },
+    textInActive:{
+        color:'white',
+        fontFamily: 'Motiva-Sans-Bold',
+    },
+    bottomLine:{
+        borderBottomWidth: 2,
+        borderBottomColor:'white',
+        borderRadius: 10,
+    },
+    tabInactive:{
+        opacity: 0.5
+    },
+    
+});
 export const TabOnSecondPage = createMaterialTopTabNavigator(
     {
         CURRENTORDER: Container.InPastOrder,
         ORDERHISTORY: Container.InProcess,
     },{
+        tabBarComponent: props =>  TabOnSecondPageCustom(props),
         tabBarOptions: {
             indicatorStyle  :{
                 backgroundColor: '#00a8ff',  
+                width: 50,
+                alignSelf:'flex-end'
             },
             style: {
                 backgroundColor: 'white',
+                elevation: 0 ,  // remove shadow on Android 
             },
-            tabStyle: {
-                height: Dimensions.get('window').height * 0.07,
-            },
-            labelStyle: {
-                color: 'black',
-            }
         },
     } 
 );

@@ -31,10 +31,9 @@ export class MainPage extends Component{
     render(){
         return(
             <View style={{flex: 1}}>
-                <ScrollView>
-                    <TabOnMainPage/>
-                </ScrollView>
-        
+
+                <TabOnMainPage/>
+
                 <TouchableOpacity style={styles.bottomOrder} onPress={() => this.popupDialog.show()}>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Ionicons name='md-cart' color='#0097e6' size={14} />
