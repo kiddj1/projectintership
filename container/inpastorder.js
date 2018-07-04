@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {fontName} from '../globalstyle/style';
+import * as font from '../globalstyle/style';
 import {
   Platform,
   StyleSheet,
@@ -27,20 +27,21 @@ export class InPastOrder extends Component{
     render(){
         return(
             <View style={{flex: 1, marginTop: 10}}>
-                <Text style={{fontFamily : fontName, textAlign: 'center'}}>RECENT SPENDINGS</Text>
+                <Text style={{fontFamily : font.fontName, textAlign: 'center'}}>RECENT SPENDINGS</Text>
                 <ScrollView style={{flex: 1, marginHorizontal: 10}}>
                     <View style={{backgroundColor: 'white', marginTop: 10, padding: 10, borderRadius: 5}}>
                         <View style={{flexDirection: 'row'}}>
                             <Image style={{width: 64, height: 64, marginLeft: 10,flex: 0.2}} source={require('../resource/img/mcdelivery_new11.jpg')} />
                             <View style={{marginLeft: 10, marginTop: 5, flex:0.6}}>
-                                <Text style={{color: 'black'}}>LOTTE COMBO</Text>
-                                <Text style={{color: '#bdc3c7'}}>$100</Text>
+                                <Text style={styles.textName}>LOTTE COMBO</Text>
+                                <Text style={styles.textValue}>$100</Text>
+                                <Text style={styles.textDay}>Jul 4,2017</Text>
                             </View>
                             <View style={{flex: 0.2, alignItems:'center'}}>
                                 <Ionicons name='md-square' color='#fbc531' size={14} style={{}} />
                                 <Text style={{fontSize: 8, color:'#fbc531'}}>Waiting</Text>
                                 <Ionicons name='md-square' color='#4cd137' size={14} style={{}} />
-                                <Text style={{fontSize: 8, color:'#4cd137'}}>Arrived</Text>
+                                <Text style={{fontSize: 8, color:'#4cd137'}}>Completed</Text>
                                 <Ionicons name='md-square' color='#e84118' size={14} style={{}} />
                                 <Text style={{fontSize: 8, color:'#e84118'}}>Delayed</Text>
                             </View>
@@ -64,5 +65,18 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center'
     },
+    textName:{
+        fontFamily: font.fontNameRegular,
+        color: 'black',
+    },
+    textValue:{
+        color: '#bdc3c7',
+        fontFamily: font.fontNameRegular
+    },
+    textDay:{
+        color: '#bdc3c7',
+        fontFamily: font.fontNameRegular,
+        fontSize: 12
+    }
   
 });
