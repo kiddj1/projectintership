@@ -13,7 +13,7 @@
     "react-native-fcm": "^16.0.0",
     "react-native-firebase": "^4.2.0",
     "react-native-linear-gradient": "^2.4.0",
-    "react-native-popup-dialog": "^0.14.50",
+    "react-native-popup-dialog": "^0.14.52",
     "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^2.5.3",
     "react-redux": "^5.0.7",

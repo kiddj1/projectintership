@@ -70,7 +70,7 @@ export class InProcess extends Component{
         return(
             <View style={{flex: 1}}>
                 <View style={{flex: 1, marginTop: 10}}>
-                    <Text style={{fontFamily : font.fontName, textAlign: 'center'}}>RECENT CURRENTs</Text>
+                    <Text style={{fontFamily : font.motivaSan, textAlign: 'center', color:'black'}}>RECENT CURRENTs</Text>
                     <ScrollView style={{flex: 1, marginHorizontal: 10}}>
                         <View style={{backgroundColor: 'white', marginTop: 10, padding: 10, borderRadius: 5}}>
                             <View style={{flexDirection: 'row'}}>
@@ -87,7 +87,6 @@ export class InProcess extends Component{
                                 
                             </View>
                         </View>
-                        <Button title='listen' onPress={() =>this.messageListener() } />
                     </ScrollView>
                 </View>
             </View>

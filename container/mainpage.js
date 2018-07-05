@@ -4,7 +4,6 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import {TabOnMainPage} from '../apptab'; 
 import LinearGradient from 'react-native-linear-gradient';
 import Firebase from 'react-native-firebase';
-import type { RemoteMessage } from 'react-native-firebase';
 import {
   Platform,
   StyleSheet,
@@ -31,7 +30,7 @@ export class MainPage extends Component{
     }  
     render(){
         return(
-            <View style={{flex: 1}}>
+            <View style={{flex: 1, backgroundColor: 'white'}}>
 
                 <TabOnMainPage/>
 
