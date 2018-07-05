@@ -4,6 +4,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Icon = Animatable.createAnimatableComponent(Ionicons);
 import * as Animatable from 'react-native-animatable';
 import Firebase from 'react-native-firebase';
+import type { RemoteMessage } from 'react-native-firebase';
 import {
   Platform,
   StyleSheet,
@@ -16,22 +17,43 @@ import {
 export class InProcess extends Component{
     constructor(props){
         super(props);
-        var config = {
-            apiKey: "AIzaSyAuJqyuJxj1HFrUI7A-xAlCkvOosTWFTYk",
-            authDomain: "deliverytest.firebaseapp.com",
-            databaseURL: "https://deliverytest-49d23.firebaseio.com/",
-            projectId: "deliverytest-49d23",
-            storageBucket: "deliverytest-49d23.appspot.com"
-        };
-        Firebase.initializeApp(config);
-        var database = Firebase.database().ref().set({
-            id: 'VUVUT',
+    
+        // var database = Firebase.database().ref().set({
+        //     id: 'VUVUT',
 
-        }).then(() => {
-            console.log('INSTALL')
+        // }).then(() => {
+        //     console.log('INSTALL')
+        // });
+        // var database = Firebase.database().ref();
+        // console.log(database);
+        // Firebase.auth().createUserWithEmailAndPassword('admin1@gmail.com','123456'); // Create user
+
+        Firebase.app().auth().signInAndRetrieveDataWithEmailAndPassword('admin1@gmail.com','123456').then((user) => {
+            
+
+
         });
-        var database = Firebase.database().ref();
-        console.log(database);
+        Firebase.auth().onAuthStateChanged((user) => {
+            console.log(user);
+        });
+
+        Firebase.app().messaging().getToken()
+        .then(fcmToken => {
+          if (fcmToken) {
+              console.log(fcmToken);
+
+          } else {
+            // user doesn't have a device token yet
+            console.log(fcmToken);
+          } 
+        });
+
+    }
+    componentDidMount() {
+    }
+    
+    componentWillUnmount() {
+  
     }
     render(){
         return(
