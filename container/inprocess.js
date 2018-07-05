@@ -4,14 +4,16 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 const Icon = Animatable.createAnimatableComponent(Ionicons);
 import * as Animatable from 'react-native-animatable';
 import Firebase from 'react-native-firebase';
-import type { RemoteMessage } from 'react-native-firebase';
+import FCM, { FCMEvent } from "react-native-fcm";
+
 import {
   Platform,
   StyleSheet,
   Text,
   View,
   ScrollView,
-  Image
+  Image,
+  Button
 } from 'react-native';
 
 export class InProcess extends Component{
@@ -27,33 +29,42 @@ export class InProcess extends Component{
         // var database = Firebase.database().ref();
         // console.log(database);
         // Firebase.auth().createUserWithEmailAndPassword('admin1@gmail.com','123456'); // Create user
-
-        Firebase.app().auth().signInAndRetrieveDataWithEmailAndPassword('admin1@gmail.com','123456').then((user) => {
-            
-
-
+       
+        // Firebase.app().auth().signInAndRetrieveDataWithEmailAndPassword('admin1@gmail.com','123456').then((user) => {
+        //     console.log(user);
+        //     if(user.user._auth._authResult){
+        //         Firebase.database().ref('users/' + user.user._user.uid).set({
+        //             createAt: user.user._user.metadata.creationTime,
+        //             email: user.user._user.email,
+        //         });
+        //         this.registerForPushNotificationsAsync(user.user._user.uid);
+        //     } 
+        // });
+        // Firebase.auth().onAuthStateChanged((user) => {
+        //     console.log(user);
+        // });
+        FCM.getFCMToken().then(token => {
+            console.log("TOKEN (getFCMToken)", token);
         });
-        Firebase.auth().onAuthStateChanged((user) => {
-            console.log(user);
-        });
+        
 
-        Firebase.app().messaging().getToken()
-        .then(fcmToken => {
-          if (fcmToken) {
-              console.log(fcmToken);
-
-          } else {
-            // user doesn't have a device token yet
-            console.log(fcmToken);
-          } 
-        });
-
-    }
-    componentDidMount() {
-    }
+    }   
+    componentDidMount(){
+        this.notificationListener = FCM.on(FCMEvent.Notification, async (notif) => {
+            console.log('event notification'+notif);
+            console.log(notif);
     
+            if(notif.opened_from_tray) {
+                alert('clicked on notification');
+                console.log('got a opened_from notification');
+            }
+            if(notif.local_notification) {
+                console.log('got a local notification');
+            }
+        });
+    }
     componentWillUnmount() {
-  
+        this.notificationListener.remove();
     }
     render(){
         return(
@@ -76,6 +87,7 @@ export class InProcess extends Component{
                                 
                             </View>
                         </View>
+                        <Button title='listen' onPress={() =>this.messageListener() } />
                     </ScrollView>
                 </View>
             </View>

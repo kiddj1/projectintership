@@ -100,7 +100,7 @@ android {
     defaultConfig {
         applicationId "com.delivery"
         minSdkVersion 16
-        targetSdkVersion 22
+        targetSdkVersion 27
         versionCode 1
         versionName "1.0"
         ndk {
@@ -140,14 +140,14 @@ dependencies {
     compile project(':react-native-firebase')
     compile project(':react-native-vector-icons')
     compile project(':react-native-linear-gradient')
+    compile project(':react-native-fcm')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
     compile "com.google.android.gms:play-services-base:15.0.0"
     compile "com.google.firebase:firebase-core:15.0.2"
-    implementation "com.google.firebase:firebase-database:15.0.0"
-    implementation "com.google.firebase:firebase-auth:15.1.0"
-    implementation "com.google.firebase:firebase-messaging:15.0.2"
+    compile "com.google.firebase:firebase-messaging:15.0.2"
+
 
 }
 

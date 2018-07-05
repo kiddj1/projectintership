@@ -3,6 +3,8 @@ import PopupDialog from 'react-native-popup-dialog';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import {TabOnMainPage} from '../apptab'; 
 import LinearGradient from 'react-native-linear-gradient';
+import Firebase from 'react-native-firebase';
+import type { RemoteMessage } from 'react-native-firebase';
 import {
   Platform,
   StyleSheet,
@@ -26,8 +28,7 @@ export class MainPage extends Component{
             this.setState({count: this.state.count + 1});
         else
             this.setState({count: this.state.count - 1});
-    }
-
+    }  
     render(){
         return(
             <View style={{flex: 1}}>
