@@ -18,7 +18,7 @@ export class SecondPage extends Component{
     }
 
     render(){
-        console.log(this.props.people);
+        console.log(this.props);
         return(
             <View style={{flex: 1}}>
                 <TabOnSecondPage/>
@@ -35,7 +35,8 @@ const mapStateToProps = state => ({
     people: state.dataReducer,
 
 });
-const mapDispatchToProps = (dispatch) => (
-    bindActionCreators(ActionCreators, dispatch)
-);
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(ActionCreators, dispatch);
+    
+};
 export default connect(mapStateToProps, mapDispatchToProps)(SecondPage);

@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as font from '../globalstyle/style';
+import { ActionCreators } from '../action/index';
+import {connect} from 'react-redux';
 import {
   Platform,
   StyleSheet,
@@ -8,17 +10,21 @@ import {
   View,
   FlatList,
   Image,
-  TouchableHighlight
+  TouchableHighlight,
+  TouchableOpacity
 } from 'react-native';
 
 export  class Food extends Component{
     constructor(props){
         super(props);
+        this.state = {
+
+        };
     }
     renderItem = ({item}) => {
-     
+        console.log(ActionCreators);
         return(
-            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => console.log('VUVU')}>
+            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.props.orderCartUpdate()}>
                     <View style={{flexDirection: 'row'}}>
                         <Image style={{width: 64, height: 64, marginLeft: 10}} source={require('../resource/img/mcdelivery_new11.jpg')} />
                         <View style={{flex: 1}}>
@@ -32,12 +38,9 @@ export  class Food extends Component{
                                 <View style={{flex: 0.8}}>
                                     <Text style={styles.textshop}>ABC FOOD</Text>
                                 </View>
-                                <View style={{flex: 0.2, marginRight: 10 , borderWidth: 0.1 , borderRadius: 5, borderColor: 'transparent' ,backgroundColor: '#4cd137' }}>
-                                    <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center',}}>
-                                        <Text style={{ fontFamily: font.motivaSanBold, color: 'white'}}>+</Text>
-                                        <Text style={{ fontFamily: font.motivaSan, color: 'white'}}>ADD</Text>
-                                    </View>
-                                </View>
+                                <TouchableOpacity style={styles.btnadd}>
+                                    <Text style={{ fontFamily: font.motivaSanBold, color: 'white', textAlign: 'center', marginTop: 3}}>+ADD</Text>
+                                </TouchableOpacity>
                             </View>
                         </View>
                     </View>
@@ -72,17 +75,38 @@ const styles = StyleSheet.create({
         
     },
     textprice:{
-        fontSize: 8,
+        fontSize: 10,
         color:'#2d3436',
         fontFamily: font.motivaSan, 
     },
     textshop:{
         marginLeft: 10,
         marginTop: 5,
-        fontSize: 8,
+        fontSize: 10,
         color: '#2d3436',
         fontFamily: font.motivaSan, 
     },
+    btnadd:{
+        flex: 0.2,
+        width: 60,
+        height: 30,
+        marginRight: 10 ,
+        backgroundColor: '#4cd137',
+        borderWidth: 0.1,
+        borderRadius: 5, 
+        borderColor: 'transparent',
+        justifyContent: 'center'
+    }
 
 
 });
+
+const mapStateToProps = state => ({
+    count: state.countReducer,
+    people: state.dataReducer,
+
+});
+const mapDispatchToProps = (dispatch) => (
+    bindActionCreators(ActionCreators, dispatch)
+);
+export default connect(mapStateToProps, mapDispatchToProps)(Food);
