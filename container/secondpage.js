@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import {connect} from 'react-redux';
-import { ActionCreators } from '../action/index';
-import { bindActionCreators } from 'redux'; 
 import {
   Platform,
   StyleSheet,
@@ -18,7 +15,7 @@ export class SecondPage extends Component{
     }
 
     render(){
-        console.log(this.props);
+        console.log(this.props.people);
         return(
             <View style={{flex: 1}}>
                 <TabOnSecondPage/>
@@ -30,13 +27,3 @@ export class SecondPage extends Component{
 const styles = StyleSheet.create({
 
 });
-const mapStateToProps = state => ({
-    count: state.countReducer,
-    people: state.dataReducer,
-
-});
-const mapDispatchToProps = (dispatch) => {
-    return bindActionCreators(ActionCreators, dispatch);
-    
-};
-export default connect(mapStateToProps, mapDispatchToProps)(SecondPage);

@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as font from '../globalstyle/style';
-import { ActionCreators } from '../action/index';
 import {connect} from 'react-redux';
 import {
   Platform,
@@ -17,12 +16,13 @@ import {
 export  class Food extends Component{
     constructor(props){
         super(props);
+        console.log(this.props);
         this.state = {
 
         };
     }
     renderItem = ({item}) => {
-        console.log(ActionCreators);
+        
         return(
             <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.props.orderCartUpdate()}>
                     <View style={{flexDirection: 'row'}}>
@@ -48,6 +48,7 @@ export  class Food extends Component{
         )
     }
     render(){
+        console.log(this.props);
         return(
             <View style={{flex: 1}}>
                 <FlatList
@@ -100,13 +101,3 @@ const styles = StyleSheet.create({
 
 
 });
-
-const mapStateToProps = state => ({
-    count: state.countReducer,
-    people: state.dataReducer,
-
-});
-const mapDispatchToProps = (dispatch) => (
-    bindActionCreators(ActionCreators, dispatch)
-);
-export default connect(mapStateToProps, mapDispatchToProps)(Food);

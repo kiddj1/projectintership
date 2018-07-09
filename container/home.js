@@ -1,16 +1,18 @@
 import React,{Component} from 'react';
-import MainStack from '../appnav';
+import {Tab} from '../apptab';
 import {View} from 'react-native';
-import Firebase from 'react-native-firebase';
-
-export default class Home extends Component{
+import {connect} from 'react-redux';
+import { ActionCreators } from '../action/index';
+import { bindActionCreators } from 'redux'; 
+export  class Home extends Component{
     constructor(props){
         super(props);
     }
     render(){
+        console.log(this.props);
         return(
             <View style={{flex: 1}}>
-                <MainStack /> 
+                <Tab /> 
             </View>
 
         )

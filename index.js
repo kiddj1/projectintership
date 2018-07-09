@@ -1,7 +1,7 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import App from './App';
-import Home from './container/home';
+import MainStack,{middleware} from './appnav';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
@@ -17,6 +17,7 @@ function configureStore(initialState){
       applyMiddleware(
         thunkMiddleware,
         loggerMiddleware,
+        middleware
       ),
     );
     return createStore(rootReducer, initialState, enhancer);
@@ -25,7 +26,7 @@ function configureStore(initialState){
 const AppContainer = () => {
     return (
         <Provider store={configureStore({})}>
-            <Home/>
+            <MainStack/>
         </Provider>
     )
 }
