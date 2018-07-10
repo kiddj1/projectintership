@@ -1,7 +1,7 @@
-import React from 'react';
+import React,{Component} from 'react';
 import { AppRegistry } from 'react-native';
 import App from './App';
-import MainStack,{middleware} from './appnav';
+import AppNav from './appnav';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware, compose } from 'redux';
 import thunkMiddleware from 'redux-thunk';
@@ -10,28 +10,24 @@ import { createLogger } from 'redux-logger';
 
 const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ });
 
-// const store = createStore(rootReducer,compose(applyMiddleware(thunkMiddleware),loggerMiddleware));
+const store = createStore(rootReducer,(applyMiddleware(thunkMiddleware,loggerMiddleware)));
 
-function configureStore(initialState){
-    const enhancer = compose(
-      applyMiddleware(
-        thunkMiddleware,
-        loggerMiddleware,
-        middleware
-      ),
-    );
-    return createStore(rootReducer, initialState, enhancer);
-}
+// function configureStore(initialState){
+//     const enhancer = compose(
+//       applyMiddleware(
+//         thunkMiddleware,
+//         loggerMiddleware,
+//       ),
+//     );
+//     return createStore(rootReducer, initialState, enhancer);
+// }
 
 const AppContainer = () => {
+    // console.log(configureStore({}));
     return (
-        <Provider store={configureStore({})}>
-            <MainStack/>
+        <Provider store={store}>
+            <AppNav/>
         </Provider>
     )
 }
-
-
-
-
 AppRegistry.registerComponent('Delivery', () => AppContainer);

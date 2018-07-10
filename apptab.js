@@ -12,6 +12,7 @@ export const Tab = createBottomTabNavigator(
         Home: Container.MainPage,
         Cart: Container.SecondPage,
     },{
+        initialRouteName: 'Home',
         swipeEnabled: false,
         tabBarOptions: {
             activeTintColor: '#eb4d4b',

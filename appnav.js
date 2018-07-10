@@ -1,38 +1,30 @@
+import React,{Component} from 'react';
 import { createStackNavigator } from 'react-navigation';
-import { Tab, TabOnMainPage ,TabOnSecondPage } from './apptab';
-import {
-    reduxifyNavigator,
-    createReactNavigationReduxMiddleware,
-  } from 'react-navigation-redux-helpers';
+import { Tab } from './apptab';
 import { connect } from 'react-redux';
-
-export const middleware = createReactNavigationReduxMiddleware(
-    "root",
-    state => state.nav,
-);
-
-export const mainStack = createStackNavigator(
+export const MainStack = createStackNavigator(
     {
-        Home: {
+        Main: {
             screen: Tab,
         },
 
     },
     {
-        headerMode: 'none'
+        headerMode: 'none',
+        initialRouteName: 'Main',
         /* Same configuration as before */
-    }
+    },
+    
 
 );
-// const navReducer = createNavigationReducer(mainStack);
-
-
-const App = reduxifyNavigator(mainStack, "root");
-
+export class AppNav extends Component {
+    
+    render() {
+        console.log(this.props);
+        return <MainStack/>
+    }
+}
 const mapStateToProps = (state) => ({
-  state: state.nav,
+    count: state.countReducer,
 });
-
-const AppWithNavigationState = connect(mapStateToProps)(App);
-
-export default AppWithNavigationState;
+export default connect(mapStateToProps)(AppNav);

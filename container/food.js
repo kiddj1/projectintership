@@ -101,3 +101,7 @@ const styles = StyleSheet.create({
 
 
 });
+const mapStateToProps = (state) => ({
+    count: state.countReducer,
+});
+export default connect(mapStateToProps)(Food);
