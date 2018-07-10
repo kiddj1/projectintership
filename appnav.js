@@ -1,7 +1,12 @@
 import React,{Component} from 'react';
-import { createStackNavigator } from 'react-navigation';
+import { createStackNavigator, createBottomTabNavigator } from 'react-navigation';
 import { Tab } from './apptab';
 import { connect } from 'react-redux';
+import Ionicons from 'react-native-vector-icons/Ionicons';
+import {
+    Image,View,Dimensions,Text,TouchableOpacity,StyleSheet,
+} from 'react-native';
+
 export const MainStack = createStackNavigator(
     {
         Main: {
@@ -27,4 +32,4 @@ export class AppNav extends Component {
 const mapStateToProps = (state) => ({
     count: state.countReducer,
 });
-export default connect(mapStateToProps)(AppNav);
+export default connect(mapStateToProps)(MainStack);

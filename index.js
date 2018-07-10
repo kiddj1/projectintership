@@ -10,22 +10,21 @@ import { createLogger } from 'redux-logger';
 
 const loggerMiddleware = createLogger({ predicate: (getState, action) => __DEV__ });
 
-const store = createStore(rootReducer,(applyMiddleware(thunkMiddleware,loggerMiddleware)));
+// const store = createStore(rootReducer,(applyMiddleware(thunkMiddleware,loggerMiddleware)));
 
-// function configureStore(initialState){
-//     const enhancer = compose(
-//       applyMiddleware(
-//         thunkMiddleware,
-//         loggerMiddleware,
-//       ),
-//     );
-//     return createStore(rootReducer, initialState, enhancer);
-// }
+function configureStore(initialState){
+    const enhancer = compose(
+      applyMiddleware(
+        thunkMiddleware,
+        loggerMiddleware,
+      ),
+    );
+    return createStore(rootReducer, initialState, enhancer);
+}
 
 const AppContainer = () => {
-    // console.log(configureStore({}));
     return (
-        <Provider store={store}>
+        <Provider store={configureStore({})}>
             <AppNav/>
         </Provider>
     )

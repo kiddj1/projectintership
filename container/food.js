@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 import * as font from '../globalstyle/style';
 import {connect} from 'react-redux';
+import { bindActionCreators } from 'redux';
+import { ActionCreators } from '../action/index';
 import {
   Platform,
   StyleSheet,
@@ -16,7 +18,6 @@ import {
 export  class Food extends Component{
     constructor(props){
         super(props);
-        console.log(this.props);
         this.state = {
 
         };
@@ -25,30 +26,29 @@ export  class Food extends Component{
         
         return(
             <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.props.orderCartUpdate()}>
-                    <View style={{flexDirection: 'row'}}>
-                        <Image style={{width: 64, height: 64, marginLeft: 10}} source={require('../resource/img/mcdelivery_new11.jpg')} />
-                        <View style={{flex: 1}}>
-                            <Text style={styles.textname}>Gà khoai tây - nước ngọt - pepsi</Text>
-                            <Text style={styles.textaddress}>37 Bình Giã, P.13, Q.Tân Bình</Text>
-                            <View style={{flexDirection: 'row', marginLeft: 10, alignItems: 'center', marginTop: 5 }}>
-                                <Ionicons style={{marginRight: 3}} name='ios-pricetags-outline' size={12} />
-                                <Text style={styles.textprice}>Price: 60k </Text>
+                <View style={{flexDirection: 'row'}}>
+                    <Image style={{width: 64, height: 64, marginLeft: 10}} source={require('../resource/img/mcdelivery_new11.jpg')} />
+                    <View style={{flex: 1}}>
+                        <Text style={styles.textname}>Gà khoai tây - nước ngọt - pepsi</Text>
+                        <Text style={styles.textaddress}>37 Bình Giã, P.13, Q.Tân Bình</Text>
+                        <View style={{flexDirection: 'row', marginLeft: 10, alignItems: 'center', marginTop: 5 }}>
+                            <Ionicons style={{marginRight: 3}} name='ios-pricetags-outline' size={12} />
+                            <Text style={styles.textprice}>Price: 60k </Text>
+                        </View>
+                        <View style={{flexDirection: 'row', flex: 1}}>
+                            <View style={{flex: 0.8}}>
+                                <Text style={styles.textshop}>ABC FOOD</Text>
                             </View>
-                            <View style={{flexDirection: 'row', flex: 1}}>
-                                <View style={{flex: 0.8}}>
-                                    <Text style={styles.textshop}>ABC FOOD</Text>
-                                </View>
-                                <TouchableOpacity style={styles.btnadd}>
-                                    <Text style={{ fontFamily: font.motivaSanBold, color: 'white', textAlign: 'center', marginTop: 3}}>+ADD</Text>
-                                </TouchableOpacity>
-                            </View>
+                            <TouchableOpacity style={styles.btnadd}>
+                                <Text style={{ fontFamily: font.motivaSanBold, color: 'white', textAlign: 'center', marginTop: 3}}>+ADD</Text>
+                            </TouchableOpacity>
                         </View>
                     </View>
+                </View>
             </TouchableHighlight>
         )
     }
     render(){
-        console.log(this.props);
         return(
             <View style={{flex: 1}}>
                 <FlatList
@@ -104,4 +104,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => ({
     count: state.countReducer,
 });
-export default connect(mapStateToProps)(Food);
+const mapDispatchToProps = (dispatch) => {
+    return bindActionCreators(ActionCreators, dispatch);
+}
+export default connect(mapStateToProps, mapDispatchToProps)(Food);

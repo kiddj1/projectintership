@@ -16,7 +16,7 @@ import {
   Image
 } from 'react-native';
 
-export class MainPage extends Component{
+class MainPage extends Component{
     constructor(props){
         super(props);
         this.state = {
@@ -104,10 +104,7 @@ const styles = StyleSheet.create({
     }
 });
 
-const mapStateToProps = (state) => {
-    console.log(state);
-    return {
-        count: state.countReducer,
-    }
-};
+const mapStateToProps = (state) => ({
+    count: state.countReducer,
+});
 export default connect(mapStateToProps)(MainPage);
