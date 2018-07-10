@@ -7,7 +7,7 @@ import {
   Button,
   ScrollView
 } from 'react-native';
-import {TabOnSecondPage} from '../apptab'; 
+// import {TabOnSecondPage} from '../apptab'; 
 export class SecondPage extends Component{
     constructor(props){
         super(props);
@@ -18,7 +18,7 @@ export class SecondPage extends Component{
         console.log(this.props.people);
         return(
             <View style={{flex: 1}}>
-                <TabOnSecondPage/>
+                {/* <TabOnSecondPage/> */}
             </View>
         )
     }

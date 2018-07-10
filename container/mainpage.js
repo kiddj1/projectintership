@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import PopupDialog from 'react-native-popup-dialog';
 import Ionicons from 'react-native-vector-icons/Ionicons';
-import {TabOnMainPage} from '../apptab'; 
+// import {TabOnMainPage} from '../apptab'; 
 import LinearGradient from 'react-native-linear-gradient';
 import Firebase from 'react-native-firebase';
+import {connect} from 'react-redux';
 import {
   Platform,
   StyleSheet,
@@ -29,10 +30,11 @@ export class MainPage extends Component{
             this.setState({count: this.state.count - 1});
     }  
     render(){
+        console.log(this.props);
         return(
             <View style={{flex: 1, backgroundColor: 'white'}}>
 
-                <TabOnMainPage/>
+                {/* <TabOnMainPage/> */}
 
                 <TouchableOpacity style={styles.bottomOrder} onPress={() => this.popupDialog.show()}>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
@@ -101,3 +103,16 @@ const styles = StyleSheet.create({
         justifyContent: 'center'
     }
 });
+
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+        count: state.countReducer
+    }   
+};
+  
+// const mapDispatchToPros = (dispatch) => {
+//     return bindActionCreators(ActionCreators, dispatch);
+// }
+  
+export default connect(mapStateToProps)(MainPage);

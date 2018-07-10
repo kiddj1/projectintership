@@ -1,38 +1,22 @@
-import { createStackNavigator } from 'react-navigation';
-import { Tab, TabOnMainPage ,TabOnSecondPage } from './apptab';
 import {
-    reduxifyNavigator,
-    createReactNavigationReduxMiddleware,
-  } from 'react-navigation-redux-helpers';
-import { connect } from 'react-redux';
+    Router,
+    Scene,
+    Actions,
+} from 'react-native-router-flux';
 
-export const middleware = createReactNavigationReduxMiddleware(
-    "root",
-    state => state.nav,
+import {tab} from './apptab';
+
+// --- child component can connect and listen to props they want.
+const myConnectedMainConponent = connect()(myMainConponent);
+const myConnectedLoginConponent = connect()(myLoginConponent);
+
+// --- Create it via Actions.create(), or it will be re-created for each render of your Router
+const scenes = Actions.create(
+    <Scene key="root">
+        <Scene key="main" component={myMainConponent} />
+    </Scene>
 );
 
-export const mainStack = createStackNavigator(
-    {
-        Home: {
-            screen: Tab,
-        },
-
-    },
-    {
-        headerMode: 'none'
-        /* Same configuration as before */
-    }
-
-);
-// const navReducer = createNavigationReducer(mainStack);
-
-
-const App = reduxifyNavigator(mainStack, "root");
-
-const mapStateToProps = (state) => ({
-  state: state.nav,
-});
-
-const AppWithNavigationState = connect(mapStateToProps)(App);
-
-export default AppWithNavigationState;
+// --- Create connected Router if you want dispatch() method.
+// --- Or you can just use vanilla Router
+export const myConnectedRouter = connect()(Router);
