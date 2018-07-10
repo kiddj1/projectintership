@@ -22,10 +22,19 @@ export  class Food extends Component{
 
         };
     }
+    fetchData(){
+        console.log('AAAA');
+        fetch('https://facebook.github.io/react-native/movies.json')
+        .then((response) => response.json() )
+        .then((responsejson) => console.log(responsejson))
+        .catch((error) => {
+            console.log(error);
+        })
+    }
     renderItem = ({item}) => {
         
         return(
-            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.props.orderCartUpdate()}>
+            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.fetchData()}>
                 <View style={{flexDirection: 'row'}}>
                     <Image style={{width: 64, height: 64, marginLeft: 10}} source={require('../resource/img/mcdelivery_new11.jpg')} />
                     <View style={{flex: 1}}>
