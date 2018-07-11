@@ -13,11 +13,15 @@ export  const orderCartReducer = (state = initialState, action) => {
                 isFetching: true
             }
         case types.ORDERCART_UPDATE:
-            return {
-                ...state,
-                isFetching: false,
-                data: state.data.concat('1'),
+
+            let newState = Object.assign({}, state);
+            if(action.checkExist)
+                newState.data[action.index] == action.data;  
+            else{
+                newState.data.push(action.data);
             }
+            newState.isFetching = false;
+            return newState;
         default:
             return state;
     }

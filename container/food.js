@@ -24,7 +24,7 @@ export  class Food extends Component{
         };
     }
     orderCartUpdate(item){
-        this.props.orderCartUpdate(item);
+        this.props.orderCart(item);
     }
     renderItem = ({item}) => { 
         return(
@@ -53,6 +53,7 @@ export  class Food extends Component{
     }
     _keyExtractor = (item, index) => index.toString();
     render(){
+        console.log(this.props);
         return(
             <View style={{flex: 1}}>
                 {this.props.data != null && this.props.data.length > 0 && !this.props.isFetching &&
