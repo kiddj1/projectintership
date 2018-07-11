@@ -12,7 +12,8 @@ import {
   FlatList,
   Image,
   TouchableHighlight,
-  TouchableOpacity
+  TouchableOpacity,
+  ActivityIndicator
 } from 'react-native';
 
 export  class Food extends Component{
@@ -22,31 +23,24 @@ export  class Food extends Component{
 
         };
     }
-    fetchData(){
-        console.log('AAAA');
-        fetch('https://facebook.github.io/react-native/movies.json')
-        .then((response) => response.json() )
-        .then((responsejson) => console.log(responsejson))
-        .catch((error) => {
-            console.log(error);
-        })
+    orderCartUpdate(item){
+        this.props.orderCartUpdate(item);
     }
-    renderItem = ({item}) => {
-        
+    renderItem = ({item}) => { 
         return(
-            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.fetchData()}>
+            <TouchableHighlight style={{paddingVertical: 10, borderBottomWidth: 0.5, borderBottomColor: '#7f8c8d30'}} underlayColor='#2c3e5030' onPress={() => this.orderCartUpdate(item)}>
                 <View style={{flexDirection: 'row'}}>
-                    <Image style={{width: 64, height: 64, marginLeft: 10}} source={require('../resource/img/mcdelivery_new11.jpg')} />
+                    <Image style={{width: 64, height: 64, marginLeft: 10}} source={{uri: 'http://mytkv.site/vu/' + item.image}} />
                     <View style={{flex: 1}}>
-                        <Text style={styles.textname}>Gà khoai tây - nước ngọt - pepsi</Text>
-                        <Text style={styles.textaddress}>37 Bình Giã, P.13, Q.Tân Bình</Text>
+                        <Text style={styles.textname}>{item.name}</Text>
+                        <Text style={styles.textaddress}>{item.address}</Text>
                         <View style={{flexDirection: 'row', marginLeft: 10, alignItems: 'center', marginTop: 5 }}>
                             <Ionicons style={{marginRight: 3}} name='ios-pricetags-outline' size={12} />
-                            <Text style={styles.textprice}>Price: 60k </Text>
+                            <Text style={styles.textprice}>Price: {item.price} </Text>
                         </View>
                         <View style={{flexDirection: 'row', flex: 1}}>
                             <View style={{flex: 0.8}}>
-                                <Text style={styles.textshop}>ABC FOOD</Text>
+                                <Text style={styles.textshop}>{item.shop}</Text>
                             </View>
                             <TouchableOpacity style={styles.btnadd}>
                                 <Text style={{ fontFamily: font.motivaSanBold, color: 'white', textAlign: 'center', marginTop: 3}}>+ADD</Text>
@@ -57,20 +51,31 @@ export  class Food extends Component{
             </TouchableHighlight>
         )
     }
+    _keyExtractor = (item, index) => index.toString();
     render(){
         return(
             <View style={{flex: 1}}>
-                <FlatList
-                    data={[{key: 'a'}, {key: 'b'}, {key: 'c'},{key: 'd'},{key: 'e'} , {key: 'f'}]}
-                    renderItem={this.renderItem}
-                />   
+                {this.props.data != null && this.props.data.length > 0 && !this.props.isFetching &&
+                    <FlatList
+                        data={this.props.data}
+                        renderItem={this.renderItem}
+                        keyExtractor={this._keyExtractor}
+                    />   
+                }
+                {this.props.isFetching &&
+                    <ActivityIndicator size="large" color="#0000ff" />
+                }
             </View>
 
         )
     }
-
+    componentWillReceiveProps(np){
+        console.log(np);
+    }
+    componentDidMount(){
+        this.props.fetchDataDelivery();
+    }
 }
-
 const styles = StyleSheet.create({
     textname:{
         marginLeft: 10,
@@ -112,6 +117,8 @@ const styles = StyleSheet.create({
 });
 const mapStateToProps = (state) => ({
     count: state.countReducer,
+    data: state.dataDelivery.data,
+    isFetching: state.dataDelivery.isFetching
 });
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(ActionCreators, dispatch);
