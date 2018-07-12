@@ -25,7 +25,6 @@ export const MainStack = createStackNavigator(
 export class AppNav extends Component {
     
     render() {
-        console.log(this.props);
         return <MainStack/>
     }
 }

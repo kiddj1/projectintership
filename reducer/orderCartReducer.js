@@ -5,7 +5,7 @@ const initialState = {
     isFetching: false,
 }
   
-export  const orderCartReducer = (state = initialState, action) => {
+export const orderCartReducer = (state = initialState, action) => {
     switch (action.type) {
         case types.ORDERCART_REQUEST:
             return {
@@ -13,7 +13,6 @@ export  const orderCartReducer = (state = initialState, action) => {
                 isFetching: true
             }
         case types.ORDERCART_UPDATE:
-
             let newState = Object.assign({}, state);
             if(action.checkExist)
                 newState.data[action.index] == action.data;  

@@ -71,7 +71,6 @@ export  class Food extends Component{
         )
     }
     componentWillReceiveProps(np){
-        console.log(np);
     }
     componentDidMount(){
         this.props.fetchDataDelivery();
@@ -119,7 +118,7 @@ const styles = StyleSheet.create({
 const mapStateToProps = (state) => ({
     count: state.countReducer,
     data: state.dataDelivery.data,
-    isFetching: state.dataDelivery.isFetching
+    isFetching: state.dataDelivery.isFetching,
 });
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators(ActionCreators, dispatch);

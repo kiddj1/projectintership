@@ -1,7 +1,6 @@
 import * as types from './types';
 
 function shouldRequest(state) {
-    console.log(state);
     return !state.orderCartReducer.isFetching;
 }
 
@@ -13,7 +12,7 @@ export function orderCart(item){
         if(!shouldRequest(getState()) ){
             return Promise.resolve();
         }
-
+        dispatch(orderCartRequest());
         if(newItem.length > 0){
             checkExist = newItem.some((e, i) =>{
                 if(e.id == item.id){
