@@ -42,7 +42,7 @@ export  class Food extends Component{
                             <View style={{flex: 0.8}}>
                                 <Text style={styles.textshop}>{item.shop}</Text>
                             </View>
-                            <TouchableOpacity style={styles.btnadd}>
+                            <TouchableOpacity style={styles.btnadd} onPress={() => this.orderCartUpdate(item)} >
                                 <Text style={{ fontFamily: font.motivaSanBold, color: 'white', textAlign: 'center', marginTop: 3}}>+ADD</Text>
                             </TouchableOpacity>
                         </View>

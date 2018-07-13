@@ -22,11 +22,13 @@ export function orderCart(item){
                 }
             })
         }
-        if(checkExist == false)
-            dispatch(orderCartUpdate(item));
+        if(checkExist == false){
+            newItem.push(item);
+            dispatch(orderCartUpdate(newItem));
+        }
         else
-            dispatch(orderCartUpdate(newItem, checkExist, index));
-        
+            dispatch(orderCartUpdate(newItem, !getState().orderCartReducer.reloadCart));
+            
     }
 }
 
@@ -35,12 +37,11 @@ function orderCartRequest() {
       type: types.ORDERCART_REQUEST
     }
 }
-function orderCartUpdate(item, checkExist, index) {
+function orderCartUpdate(item, reloadCart) {
 
     return {
       type: types.ORDERCART_UPDATE,
       data: item,
-      checkExist: checkExist,
-      index: index
+      reloadCart: reloadCart,
     }
 }

@@ -1,8 +1,10 @@
 import * as types from '../action/types';
+import createReducer from '../globalstyle/createReducer';
 
 const initialState = {
     data: [],
     isFetching: false,
+    reloadCart: false,
 }
   
 export const orderCartReducer = (state = initialState, action) => {
@@ -13,15 +15,17 @@ export const orderCartReducer = (state = initialState, action) => {
                 isFetching: true
             }
         case types.ORDERCART_UPDATE:
-            let newState = Object.assign({}, state);
-            if(action.checkExist)
-                newState.data[action.index] == action.data;  
-            else{
-                newState.data.push(action.data);
+            // let newState = Object.assign({}, state);
+            // newState.data =
+            // newState.isFetching = false;
+            return {
+                ...state,
+                data: action.data,
+                isFetching: false,
+                reloadCart: action.reloadCart != null ? action.reloadCart : state.reloadCart,
             }
-            newState.isFetching = false;
-            return newState;
         default:
             return state;
     }
 }
+

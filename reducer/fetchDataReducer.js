@@ -4,7 +4,10 @@ const initialState = {
     data: [],
     dataFetched: false,
     isFetching: false,
-    error: false
+    error: false,
+    [types.FETCHING_DATA_REQUEST](state, action){
+        let newState;
+    },
 }
   
 export  const dataDelivery = (state = initialState, action) => {

@@ -32,11 +32,9 @@ class MainPage extends Component{
             this.setState({count: this.state.count - 1});
     }  
     refreshScreen(){
-        console.log('BBBBB');
         this.setState({refreshScreen: !this.state.refreshScreen});
     }
     renderItemCart = ({item}) =>{
-    console.log('AAAAVV');
     return(
         <View style={{flex: 1}}> 
             <View style={{borderWidth: 0.5, marginHorizontal: 10, marginTop: 5, borderColor:'#bdc3c7'}}></View>
@@ -50,18 +48,13 @@ class MainPage extends Component{
                         <TouchableOpacity style={styles.plus} onPress={() => this.toggleCount(false) } >
                             <Ionicons name='ios-remove' size={18} color='#2980b9' />
                         </TouchableOpacity>
-                        <Text style={{marginHorizontal: 10}}>{this.state.count}</Text>
+                        <Text style={{marginHorizontal: 10}}>{item.amount}</Text>
                         <TouchableOpacity style={styles.plus} onPress={() => this.toggleCount(true) } >
                             <Ionicons name='ios-add' size={18} color='#e74c3c' />
                         </TouchableOpacity>
                     </View>
                 </View>
             </View>
-            <TouchableOpacity style={{ width: '50%', position:'absolute', bottom: 10, right: 5,borderRadius: 20 }}>
-                <LinearGradient  start={{x: 0.1, y: 0.25}} end={{x: 0.4, y: 1.0}} locations={[0.25,1]} colors={['#FBAB7E','#F7CE68']}  >
-                        <Text style={{color: 'white',textAlign: 'center', color:'white'}}>Check out</Text>
-                </LinearGradient>
-            </TouchableOpacity>
         </View>
     );
     }
@@ -71,13 +64,13 @@ class MainPage extends Component{
         console.log(this.props);
         return(
             <View style={{flex: 1, backgroundColor: 'white'}}>
-                <Text>{this.props.dataCart.length > 0 && this.props.dataCart[0].name}</Text>
+                {/* <Text>{this.props.dataCart.length > 0 && this.props.dataCart[0].name}</Text> */}
                 <TabOnMainPage />
 
                 <TouchableOpacity style={styles.bottomOrder} onPress={() =>{this.refreshScreen(); this.popupDialog.show()} }>
                     <View style={{flexDirection: 'row', alignItems: 'center'}}>
                         <Ionicons name='md-cart' color='#0097e6' size={14} />
-                        <Text style={{marginLeft: 10, color:'#0097e6', fontSize: 12}}>0 Items - 0$</Text>
+                        <Text style={{marginLeft: 10, color:'#0097e6', fontSize: 12}}>{this.props.dataCart.length} Items - 0$</Text>
                     </View>
                 </TouchableOpacity>
                 <PopupDialog
@@ -91,7 +84,13 @@ class MainPage extends Component{
                             data={this.props.dataCart}
                             renderItem={this.renderItemCart}
                             keyExtractor={this._keyExtractor}
+                            extraData={this.state.refreshScreen}
                         />   
+                         <TouchableOpacity style={{ width: '50%', position:'absolute', bottom: 10, right: 5,borderRadius: 20 }}>
+                            <LinearGradient  start={{x: 0.1, y: 0.25}} end={{x: 0.4, y: 1.0}} locations={[0.25,1]} colors={['#FBAB7E','#F7CE68']}  >
+                                    <Text style={{color: 'white',textAlign: 'center', color:'white'}}>Check out</Text>
+                            </LinearGradient>
+                        </TouchableOpacity>
                     </View>
                 </PopupDialog>
             </View>
@@ -126,5 +125,8 @@ const styles = StyleSheet.create({
 
 const mapStateToProps = (state) => ({
     dataCart: state.orderCartReducer.data,
+    reloadCart: state.orderCartReducer.reloadCart,
+    count: state.countReducer,
+    isFetching: state.orderCartReducer.isFetching
 });
 export default connect(mapStateToProps)(MainPage);
